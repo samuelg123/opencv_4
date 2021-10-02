@@ -686,7 +686,7 @@ class Cv2 {
     return result;
   }
 
-  /// [detailEnhance] function of Module: Color Maps
+  /// [detailEnhance] function of Module: Photo
   static Future<Uint8List?> detailEnhance({
     CVPathFrom pathFrom = CVPathFrom.ASSETS,
     required String pathString,

@@ -35,7 +35,7 @@ class DetailEnhanceFactory {
         break;
       case CVPathFrom.URL:
         _file = await DefaultCacheManager().getSingleFile(pathString);
-        result = await platform.invokeMethod('bilateralFilter', {
+        result = await platform.invokeMethod('detailEnhance', {
           "pathType": 2,
           "pathString": '',
           "data": await _file.readAsBytes(),
@@ -46,7 +46,7 @@ class DetailEnhanceFactory {
         break;
       case CVPathFrom.ASSETS:
         _fileAssets = await Utils.imgAssets2Uint8List(pathString);
-        result = await platform.invokeMethod('bilateralFilter', {
+        result = await platform.invokeMethod('detailEnhance', {
           "pathType": 3,
           "pathString": '',
           "data": _fileAssets,
