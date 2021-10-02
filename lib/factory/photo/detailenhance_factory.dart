@@ -16,8 +16,8 @@ class DetailEnhanceFactory {
   static Future<Uint8List?> detailEnhance({
     required CVPathFrom pathFrom,
     required String pathString,
-    required double sigmaS,
-    required double sigmaR,
+    double? sigmaS,
+    double? sigmaR,
   }) async {
     File _file;
     Uint8List _fileAssets;

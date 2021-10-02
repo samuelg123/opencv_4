@@ -22,6 +22,7 @@ import 'package:opencv_4/factory/miscellaneoustransform/adaptivethreshold_factor
 import 'package:opencv_4/factory/miscellaneoustransform/distancetransform_factory.dart';
 import 'package:opencv_4/factory/miscellaneoustransform/threshold_factory.dart';
 import 'package:opencv_4/factory/pathfrom.dart';
+import 'package:opencv_4/factory/photo/detailenhance_factory.dart';
 
 /// class that contains the implementation of OpenCV modules
 class Cv2 {
@@ -679,6 +680,25 @@ class Cv2 {
       pathFrom: pathFrom,
       pathString: pathString,
       colorMap: colorMap,
+    );
+
+    /// Function returns the response from method channel
+    return result;
+  }
+
+  /// [detailEnhance] function of Module: Color Maps
+  static Future<Uint8List?> detailEnhance({
+    CVPathFrom pathFrom = CVPathFrom.ASSETS,
+    required String pathString,
+    double? sigmaS,
+    double? sigmaR,
+  }) async {
+    /// Variable to store operation result
+    final Uint8List? result = await DetailEnhanceFactory.detailEnhance(
+      pathFrom: pathFrom,
+      pathString: pathString,
+      sigmaS: sigmaS,
+      sigmaR: sigmaR,
     );
 
     /// Function returns the response from method channel
