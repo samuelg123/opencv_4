@@ -336,8 +336,8 @@ class Opencv4Plugin : FlutterPlugin, MethodCallHandler {
                         call.argument<Int>("pathType") as Int,
                         call.argument<String>("pathString") as String,
                         call.argument<ByteArray>("data") as ByteArray,
-                        call.argument("sigmaS"),
-                        call.argument("sigmaR"),
+                        call.argument<Double?>("sigmaS")?.toFloat(),
+                        call.argument<Double?>("sigmaR")?.toFloat(),
                         result
                     )
                 } catch (e: Exception) {
